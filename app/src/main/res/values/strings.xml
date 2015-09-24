@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GeoQuiz</string>
+
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="next_button">Next</string>
+    <string name="prev_button">Prev</string>
+
+    <string name="correct_toast">You are correct!</string>
+    <string name="incorrect_toast">Wrong answer :(</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="q1">Columbus was the first European to visit the Americas.</string>
+    <string name="q2">Canberra is the capital city of Australia.</string>
+    <string name="q3">Australia was the last continent to be \"discovered\" by the Europeans.</string>
+    <string name="q4">The water in the Great Lakes is salty.</string>
+    <string name="q5">Greenland is part of Northern America.</string>
+    <string name="q6">There are more countries in the EU than there are states in the USA.</string>
+    <string name="q7">Amsterdam is the capital city of Belgium.</string>
+    <string name="q8">The Pacific ocean is the largest ocean.</string>
+    <string name="q9">Mandarine is one of the least spoken languages in China.</string>
+    <string name="q10">Alaska became American in XVIII century.</string>
+</resources>
