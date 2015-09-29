@@ -22,6 +22,8 @@ public class QuizActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_CHEAT = 0;
     private boolean mIsCheater;
 
+    private boolean[] cheated = new boolean[10];
+
     private Button mTrueButton;
     private Button mCheatButton;
     private Button mFalseButton;
@@ -55,6 +57,9 @@ public class QuizActivity extends AppCompatActivity {
             }
 
             mIsCheater = CheatActivity.wasAnswerShown(data);
+            if (mIsCheater) {
+                cheated[mCurrentIndex] = true;
+            }
         }
 
     }
@@ -78,7 +83,7 @@ public class QuizActivity extends AppCompatActivity {
         int messageResId;
         boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
 
-        if (mIsCheater) {
+        if (mIsCheater || cheated[mCurrentIndex]) {
             messageResId = R.string.judgement_toast;
         }
         else {
@@ -113,6 +118,7 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
             mIsCheater = savedInstanceState.getBoolean("mIsCheater", false);
+            cheated = savedInstanceState.getBooleanArray("cheated");
         }
 
         mCheatButton.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +178,7 @@ public class QuizActivity extends AppCompatActivity {
         Log.i(TAG, "onSaveInstanceState");
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex-1);
         savedInstanceState.putBoolean("mIsCheater", mIsCheater);
+        savedInstanceState.putBooleanArray("cheated", cheated);
     }
 
     @Override
