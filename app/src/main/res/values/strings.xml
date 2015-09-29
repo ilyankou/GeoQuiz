@@ -5,6 +5,10 @@
     <string name="false_button">False</string>
     <string name="next_button">Next</string>
     <string name="prev_button">Prev</string>
+    <string name="warning_text">Are you sure you want to do this?</string>
+    <string name="show_answer_button">Show Answer</string>
+    <string name="cheat_button">Cheat!</string>
+    <string name="judgement_toast">Cheating is wrong...</string>
 
     <string name="correct_toast">You are correct!</string>
     <string name="incorrect_toast">Wrong answer :(</string>
@@ -21,4 +25,7 @@
     <string name="q8">The Pacific ocean is the largest ocean.</string>
     <string name="q9">Mandarine is one of the least spoken languages in China.</string>
     <string name="q10">Alaska became American in XVIII century.</string>
+    <string name="title_activity_cheat">Cheat</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
