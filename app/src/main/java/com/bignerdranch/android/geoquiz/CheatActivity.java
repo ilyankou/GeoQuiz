@@ -48,7 +48,8 @@ public class CheatActivity extends AppCompatActivity {
         mAnswerIsTrue = getIntent().getBooleanExtra(EXTRA_ANSWER_IS_TRUE, false);
 
         if (savedInstanceState != null) {
-            setAnswerShownResult(savedInstanceState.getBoolean("rotationAnswerShown"));
+            rotationAnswerShown = savedInstanceState.getBoolean("rotationAnswerShown");
+            setAnswerShownResult(rotationAnswerShown);
             mAnswerTextView.setText(savedInstanceState.getString("myText"));
         }
 
