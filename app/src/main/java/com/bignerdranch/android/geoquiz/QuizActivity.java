@@ -3,6 +3,7 @@ package com.bignerdranch.android.geoquiz;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +31,7 @@ public class QuizActivity extends AppCompatActivity {
     private ImageButton mNextButton;
     private ImageButton mPrevButton;
     private TextView mQuestionTextView;
+    private TextView mApiLevel;
 
     private Question[] mQuestionBank = new Question[] {
                 new Question(R.string.q1, false),
@@ -114,6 +116,10 @@ public class QuizActivity extends AppCompatActivity {
         mNextButton = (ImageButton) findViewById(R.id.next_button);
         mPrevButton = (ImageButton) findViewById(R.id.prev_button);
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+
+        mApiLevel = (TextView) findViewById(R.id.api_level);
+        mApiLevel.setPadding(0, 30, 0, 0);
+        mApiLevel.setText("API level " + Build.VERSION.SDK_INT);
 
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
